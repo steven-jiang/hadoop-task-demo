@@ -27,4 +27,3 @@ git.*.properties
 dump.rdb
 jssecacerts
 
-!build/libs/*.jar
