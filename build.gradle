@@ -1,0 +1,35 @@
+plugins {
+	id 'nebula.provided-base' version '3.0.3' // if you want provided-base
+}
+
+ext{
+	hadoopVersion="2.7.1"
+}
+
+group 'com.kii.hadoop.mapreduce'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'nebula.provided-base'
+
+sourceCompatibility = 1.5
+
+repositories {
+		mavenLocal()
+		mavenCentral()
+		jcenter()
+
+}
+
+
+dependencies {
+
+	provided  "org.apache.hadoop:hadoop-mapreduce-client-app:${hadoopVersion}"
+	provided  "org.apache.hadoop:hadoop-common:${hadoopVersion}"
+
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+jar{
+	baseName="hadoop-demo-task"
+}
