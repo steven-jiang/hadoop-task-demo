@@ -1,5 +1,5 @@
 !.gitignore
-!build/libs/*.jar
+
 .svn
 .classpath
 .project
@@ -26,3 +26,5 @@ git.*.properties
 /.metadata/
 dump.rdb
 jssecacerts
+
+!build/libs/
